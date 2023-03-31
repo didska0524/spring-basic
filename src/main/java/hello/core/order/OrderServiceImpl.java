@@ -11,6 +11,16 @@ public class OrderServiceImpl implements  OrderService{
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+
+    /*@Autowired //수정자 주입 필드에 final 을 생략할 필요가 있다.
+    public void setMemberRepository(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+    @Autowired
+    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+        this.discountPolicy = discountPolicy;
+    }*/
+
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
