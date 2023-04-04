@@ -37,6 +37,7 @@ public class AppConfig { // AppConfig 처럼 객체를 생성하고 관리하면
     public OrderService orderService(){
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+        //return null;
     }
 
     @Bean
